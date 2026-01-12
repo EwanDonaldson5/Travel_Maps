@@ -1,0 +1,160 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  padding-top: calc(var(--spacing-md) + var(--safe-area-top));
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.backButton {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.backButton:hover {
+  background: var(--color-bg-tertiary);
+}
+
+.headerTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Not found / Locked states */
+.notFound,
+.locked {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-md);
+}
+
+.locked svg {
+  color: var(--color-accent-gold);
+  opacity: 0.8;
+}
+
+.locked h2,
+.notFound h2 {
+  font-size: 1.25rem;
+}
+
+.locked p {
+  color: var(--color-text-secondary);
+  max-width: 280px;
+}
+
+.subscribeButton {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-gold-light) 100%);
+  border-radius: var(--radius-full);
+  color: var(--color-bg-deep);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.subscribeButton:hover {
+  transform: scale(1.02);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: var(--spacing-lg);
+  padding-bottom: calc(var(--spacing-xl) + 80px);
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.h1 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+.h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-accent-gold);
+}
+
+.h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.paragraph {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.paragraph strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.list {
+  margin-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-lg);
+  color: var(--color-text-secondary);
+}
+
+.list li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.list li strong {
+  color: var(--color-text-primary);
+}
+
+ol.list {
+  list-style-type: decimal;
+}
+
+ul.list {
+  list-style-type: disc;
+}
+
+/* Nested lists */
+.list .list {
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}

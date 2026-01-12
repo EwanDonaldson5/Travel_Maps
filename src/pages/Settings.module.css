@@ -1,0 +1,320 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  padding-top: calc(var(--spacing-lg) + var(--safe-area-top));
+  padding-bottom: calc(var(--spacing-xl) + 80px);
+}
+
+.header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.header h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Status Bar */
+.statusBar {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.statusItem.online {
+  color: var(--color-success);
+  background: rgba(74, 157, 110, 0.15);
+}
+
+.statusItem.offline {
+  color: var(--color-warning);
+  background: rgba(212, 160, 58, 0.15);
+}
+
+/* Sections */
+.section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-md);
+}
+
+.card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.premiumCard {
+  border-color: var(--color-accent-gold);
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, var(--color-bg-secondary) 100%);
+}
+
+/* Premium Badge */
+.premiumBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
+
+.premiumBadge svg {
+  width: 40px;
+  height: 40px;
+  padding: var(--spacing-sm);
+  background: var(--color-accent-gold);
+  border-radius: 50%;
+  color: var(--color-bg-deep);
+}
+
+.premiumBadge h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+}
+
+.premiumBadge p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* Plan Info */
+.planInfo {
+  padding: var(--spacing-lg);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.planInfo h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.features {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.features li svg {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+/* Subscribe Form */
+.subscribeForm {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+}
+
+.inputGroup input {
+  flex: 1;
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.inputGroup:focus-within {
+  border-color: var(--color-accent-gold);
+}
+
+.subscribeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-gold-light) 100%);
+  border-radius: var(--radius-md);
+  color: var(--color-bg-deep);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.subscribeButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.restoreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.restoreButton:hover {
+  color: var(--color-text-primary);
+}
+
+.restoreButton:disabled {
+  opacity: 0.5;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Action Buttons */
+.actionButton {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  width: 100%;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.actionButton:hover {
+  background: var(--color-bg-tertiary);
+}
+
+.actionButton svg {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.actionButton span {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.actionButton p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.actionButton.danger svg {
+  color: var(--color-danger);
+}
+
+.actionButton.danger span {
+  color: var(--color-danger);
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* About */
+.aboutInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
+
+.aboutInfo svg {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.aboutInfo h3 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.aboutInfo p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.copyright {
+  margin-top: var(--spacing-sm);
+  font-size: 0.75rem !important;
+  color: var(--color-text-muted) !important;
+}
+
+/* Offline Notice */
+.offlineNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  margin-top: auto;
+}
+
+.offlineNotice svg {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.offlineNotice p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
