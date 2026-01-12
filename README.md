@@ -55,8 +55,6 @@ An offline-first Progressive Web App (PWA) for hunters, hikers, adventure travel
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/livingstone-maps.git
-cd livingstone-maps
 
 # Install dependencies
 npm install
@@ -171,11 +169,3 @@ npm run preview
 - [ ] Performance optimization
 - [ ] Documentation
 - [ ] Handover
-
-## License
-
-This project is proprietary software. All rights reserved.
-
-## Support
-
-For support, email support@livingstonemaps.com
